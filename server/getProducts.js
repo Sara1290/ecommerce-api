@@ -7,11 +7,18 @@ const getProducts = (req, res) => {
         )
         return res.status(200).send(filteredProducts)
     }
-    // const item = products.find((val) => val.id === +(req.params.id))
-    // if (!item) {
-    //     return res.status(500).send('Item not in list')
-    // }
+   
     res.status(200).send(products)
-}
+}, 
 
+const getProduct = (req, res) => {
+    const product = products.find((val) => val.id === +(req.params.id))
+    if (!product) {
+        return res.status(500).send('Item not in list')
+    }
+    res.status(200).send(item)
+    
+}
+module.exports = getProduct
 module.exports = getProducts
+    

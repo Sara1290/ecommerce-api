@@ -6,6 +6,6 @@ const app = express();
 
 
 app.get('/api/products', getProducts)
-app.get('/api/products/:id', getProducts)
+app.get('/api/products/:id', getProduct)
 
 app.listen(4041, () => console.log('server running on 4041'))
